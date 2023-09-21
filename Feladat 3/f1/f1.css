@@ -1,0 +1,48 @@
+body { margin: 0 }
+
+.container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: purple;
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.header div:first-of-type {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container div:first-child div div {
+    background-color: cyan;
+    width: 60px;
+    height: 20px;
+    
+}
+
+.container2 { 
+    flex-grow: 1; 
+    width: 100%; 
+    height: 100%; 
+    display: flex 
+}
+
+.main {
+    background-color: yellow;
+    flex-grow: 1;
+    width: 100%;
+    flex-basis: 150%;
+}
+
+.sidebar {
+    background-color: green;
+    width: 100%;
+    flex-grow: 1;
+}
