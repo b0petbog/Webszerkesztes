@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Órarend</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="light-mode">
+    <div class="side">
+        <div class="header">
+            <div>Csoportos órarend</div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="day">Hétfő</div>
+                <div class="de">07:30 <br>SpinRacing</div>
+                <div class="de">08:30 <br>TRX PLUSZ</div>
+                <div class="de">09:30 <br>PILATES</div>
+                <div class="du">16:00 <br>TRX PLUSZ</div>
+                <div class="du">17:00 Zsírégető <br>FitBody</div>
+                <div class="du">18:00 Táncos <br>alakformáló</div>
+                <div class="du">19:00 <br>SpinRacing</div>
+                </div>
+            <div>
+                <div class="day">Kedd</div>
+                <div class="de">07:00 <br>Alakformáló</div>
+                <div class="de">08:00 <br>Köredzés</div>
+                <div class="du">16:00 <br>SpinRacing</div>
+                <div class="du">17:00 <br>Alakformáló</div>
+                <div class="du">18:00 STEP</div>
+                <div class="du">19:00 <br>CrossTraining</div>
+            </div>
+            <div>
+                <div class="day">Szerda</div>
+                <div class="de">07:30 <br>SpinRacing</div>
+                <div class="de">08:30 <br>TRX PLUSZ</div>
+                <div class="de">09:30 <br>PILATES</div>
+                <div class="special">15:00 Szétnyílt<br>hasizom tréning</div>
+                <div class="du">16:00 <br>TRX PLUSZ</div>
+                <div class="du">17:00 Zsírégető <br>FitFight</div>
+                <div class="du">18:00 Táncos <br>alakformáló</div>
+                <div class="du">19:00 <br>SpinRacing</div>
+            </div>
+            <div>
+                <div class="day">Csütörtök</div>
+                <div class="de">07:00 <br>Alakformáló</div>
+                <div class="de">08:00 <br>Köredzés</div>
+                <div class="du">16:00 <br>SpinRacing</div>
+                <div class="du">17:00 <br>Alakformáló</div>
+                <div class="du">18:00 STEP</div>
+                <div class="du">19:00 <br>CrossTraining</div>
+            </div>
+            <div>
+                <div class="day">Péntek</div>
+                <div class="de">08:30 <br>TRX PLUSZ</div>
+                <div class="du">15 <br>Alakformáló</div>
+                <div class="du">16:00 <br>Köredzés</div>
+                <div class="du">17:00 Zsírégető<br>FitBody</div>
+                <div class="du">18:00 BALANCE<br>mínusz</div>
+                <div class="du">19:00 <br>SpinRacing</div>
+            </div>
+        </div>
+        <div class="container2">
+            <div>
+                <div class="day">Szombat</div>
+                <div class="de">08:30 Funkcionális<br>köredzés</div>
+                <div class="de">09:30 SpinRacing<br>EXTRÁKKAL</div>
+                <div class="special">11:00 Szétnyílt<br>hasizom tréning</div>
+            </div>
+            <div>
+                <div class="du">16:00 <br>PILATES</div>
+                <div class="du">17:00<br>Has-láb-popsi</div>
+                <div class="du">18:00 <br>Jóga</div>
+
+            </div>
+            <div>
+                <div class="day">Vasárnap</div>
+                <div class="de">10:00 BALANCE</div>
+                <div class="du">16:30 <br>SpinRacing</div>
+            </div>
+            <div>
+                <div class="du">17:30 Zsirégető<br>FitBody</div>
+                <div class="du">18:30 Táncos<br>alakformáló</div>
+            </div>
+            <div class="buttons">
+                <button onclick="darkMode()" >Darkmode</button>
+                <button onclick="lightMode()">LightMode</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function darkMode() {
+            let element = document.body;
+            element.className = "dark-mode";
+            let head = document.querySelector('.header');
+            head.className = "head-dark";
+            for(let i=0;i<7;i++) {
+                let day = document.querySelector('.day')
+                day.className="day-dark";
+            }
+            for(let i=0;i<2;i++) {
+                let spec = document.querySelector('.special')
+                spec.className="spec-dark";
+            }
+            for(let i=0;i<14;i++) {
+                let de = document.querySelector('.de')
+                de.className="de-dark";
+            }
+            for(let i=0;i<27;i++) {
+                let du = document.querySelector('.du')
+                du.className="du-dark";
+            }
+        }
+
+        function lightMode() {
+            let element = document.body;
+            element.className = "light-mode";
+            let head = document.querySelector('.head-dark');
+            head.className = "header";
+            for(let i=0;i<7;i++) {
+                let day = document.querySelector('.day-dark')
+                day.className="day";
+            }
+            for(let i=0;i<2;i++) {
+                let spec = document.querySelector('.spec-dark')
+                spec.className="special";
+            }
+            for(let i=0;i<14;i++) {
+                let de = document.querySelector('.de-dark')
+                de.className="de";
+            }
+            for(let i=0;i<27;i++) {
+                let du = document.querySelector('.du-dark')
+                du.className="du";
+            }
+        }
+    </script>
+</body>
+</html>
