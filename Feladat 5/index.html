@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feladat 5</title>
+</head>
+<body>
+    <div id="content">
+        <div class="input-div">
+            <input type="text" id="text">
+            <button type="submit" onclick="getInputValue()" class="button">Submit</button>
+        </div>
+        <div id="elements"></div>
+        <div id="hiba"></div>
+    </div>
+
+    <script>
+        let adatok=[];
+        let adatindex;
+        function getInputValue()
+        {
+            let adat=document.getElementById("text").value; 
+            let elemeE="nem";
+            if(adat=="")
+            {
+                document.getElementById("hiba").innerHTML="Nincs adat a beviteli mezőben";
+                document.getElementById("hiba").style.visibility
+            }
+            else
+            {
+                for(elem of adatok) 
+                {
+                    if(elem==adat)
+                    {
+                        elemeE="igen";
+                    }
+                }
+                if(elemeE=="igen")
+                {
+                    document.getElementById("hiba").innerHTML="Az adat már eleme a tömbnek";
+                    
+                }
+                else
+                {
+                    adatok[adatindex]=adat;
+                    adatindex++;
+                    document.getElementById("elements").innerHTML+=
+                    `<div class="item">
+                    ${adat}
+                    </div>`;
+                }
+            }
+            document.getElementById("text").value = ""; 
+        }
+    </script>
+</body>
+</html>
