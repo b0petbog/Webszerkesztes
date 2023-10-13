@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 4</title>
+</head>
+<body>
+    <div id="writeout">Tömb elemeinek keresése</div>
+    <div>
+        <button onclick="ClickBtn1()">Első elem</button>
+        <button onclick="ClickBtn2()">Második elem</button>
+        <button onclick="ClickBtn3()">Harmadik elem</button>
+        <button onclick="ClickBtnOssz()">Összes elem</button>
+        <button onclick="ClickBtnHossz()">Tömb hossza</button>
+    </div>
+    <div>
+        <input type="text" id="in">
+        <button onclick="ClickBtnBevitel()">Bevitel</button>
+    </div>
+    <div>
+        <input type="number" id="del">
+        <button onclick="ClickBtnDelete()">Elem törlése</button>
+    </div>
+    
+
+    <script>
+        //Első feladat
+        let tomb=[1, 2, 3];
+        function ClickBtn1()
+        {
+            document.getElementById("writeout").innerHTML="A tömb első eleme: " + tomb[0];
+        }
+
+        function ClickBtn2()
+        {
+            document.getElementById("writeout").innerHTML="A tömb második eleme: "+tomb[1];
+        }
+
+        function ClickBtn3()
+        {
+            document.getElementById("writeout").innerHTML="A tömb harmadik eleme: " +tomb[2];
+        }
+
+        //Második feladat
+        function ClickBtnOssz()
+        {
+            document.getElementById("writeout").innerHTML="A tömb összes eleme: ";
+            for(let i=0;i<tomb.length;i++)
+            {
+                if(i==(tomb.length-1))
+                {
+                    document.getElementById("writeout").innerHTML+=tomb[i];
+                }
+                else 
+                {
+                    document.getElementById("writeout").innerHTML+=tomb[i]+", ";
+                }
+            }
+        } 
+
+        //Harmadik feladat
+        function ClickBtnBevitel()
+        {
+            let plusz=document.getElementById("in").value;
+            tomb.push(plusz);
+        }
+
+        //Negyedik feladat
+        function ClickBtnHossz()
+        {
+            document.getElementById("writeout").innerHTML="A tömb " +tomb.length+" elemet tartalmaz";
+        }
+
+        //Ötödik feladat
+        function ClickBtnDelete()
+        {
+            let delindex=document.getElementById("del").value;
+            tomb.splice(delindex, 1)
+        }
+    </script>
+</body>
+</html>
