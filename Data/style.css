@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box
+}
+
+body { 
+    background-color: lightgoldenrodyellow;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+.box-container { 
+    padding: 10px;
+}
+
+.box-container .box:last-child { 
+    margin-top: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10%;
+}
