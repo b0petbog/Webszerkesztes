@@ -1,0 +1,39 @@
+* {
+    background-color: lightsalmon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main {
+    font-size: x-large;
+}
+
+h1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+input {
+    background-color: darkred;
+    color: aliceblue;
+    margin-left: 20px;
+    font-size: x-large;
+}
+
+.main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+button {
+    font-size: x-large;
+}
+
+#go {
+    background-color: lightgreen;
+}
+
+#reset {
+    background-color: rgb(219, 63, 63);
+}

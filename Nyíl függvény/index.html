@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nyíl függvény</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Nyíl függvény</h1> 
+        <div class="main">
+            <form>
+                <fieldset>
+                    <legend>Szövegmegfordítás</legend>
+                    <label for="szoveg">Kérem a szöveget!</label>  
+                    <input id="szoveg" type="text">
+                    <button onclick="Go();" id="go">Mehet!</button>
+                    <button type="reset" id="reset">Törlés</button>
+                </fieldset>
+                
+            </form>
+        </div>
+    </div>
+    <div id="result"></div>
+    <script>
+        const Go = () => {
+            let text = document.getElementById("szoveg").value;
+            let back =text.reverse;
+            document.getElementById("result")=back;
+        };
+    </script>
+</body>
+</html>
