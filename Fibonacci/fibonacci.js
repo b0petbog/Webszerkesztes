@@ -5,11 +5,11 @@ function doFibonacci(end)
     {
         if(i==0)
         {
-            numbers[i]=0;
+            tomb[i]=0;
         }
         else if(i==1)
         {
-            numbers[i]=1;
+            tomb[i]=1;
         }
         else
         {
