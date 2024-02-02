@@ -25,5 +25,20 @@ function mean(numbers)
     return mean / numbers.length;
 }
 
-console.log(median(tomb));
-console.log(mean(tomb));
+function meanVsMedian(numbers)
+{
+    if(median(numbers)>mean(numbers))
+    {
+        return "median";
+    }
+    else if(median(numbers)<mean(numbers))
+    {
+        return "mean";
+    }
+    else
+    {
+        return "same";
+    }
+}
+
+console.log(meanVsMedian(tomb));
