@@ -1,0 +1,5 @@
+1. hibát ad
+2. stringként kezeli a számokat és nem intként, a végére íri az 1-et, nem növeli
+3. annyival növeli az id-t, amennyi meg van adva
+4. kiírja a hibát pontosabban
+5. más képeket ad be
