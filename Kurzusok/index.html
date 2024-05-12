@@ -1,0 +1,49 @@
+
+<!DOCTYPE html lang="hu">
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kurzus</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src='script.js'></script>
+</head>
+<body onload="load()">
+    <div id="main">
+        <div class="edit">
+            <label for="courseNew">Az új kurzus neve:</label>
+            <input type="text" id="courseNew">
+            <button onclick="MakeNewCourse()" class="admission">Felvétel!</button>
+        </div>
+        
+        <div class="edit">
+            <label for="studentNewName">Az új diák neve:</label>
+            <input type="text" id="studentNewName">
+            <label for="studentNewCourse">  Kurzusa:</label>
+            <input type="number" id="studentNewCourse">
+            <button onclick="MakeNewStudent()" class="admission">Felvétel!</button>
+        </div>
+        
+        <div class="edit">
+            <label for="searchStudentID">Diák kereséde ID alapján:</label>
+            <input id="searchStudentID" type="number" min="1" >
+            <button onclick="SearchStudentById()"" class="search">Keresés</button>
+        </div>
+
+        <div class="edit">
+            <div id="studentData"></div>
+            <label for="courseID">Kérem adja meg egy kurzus ID-ját a kereséshez:</label>
+            <input id="courseID" type="number" min="1">
+            <button onclick="SearchCourseById()" class="search">Keresés</button>
+        </div>
+
+        
+        <div id="kurzusadat"></div>
+
+        <h1>Kurzusok</h1>
+        <table id="ki"></table>
+    </div>
+</body>
+</html>
