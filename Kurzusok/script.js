@@ -108,7 +108,7 @@ function NewName(diaID) {
     })
     .then(json => {
         alert("A név sikeresen meg lett változtatva", json);
-        megjelenites();
+        load();
     })
     .catch(hiba => console.hiba('Hiba a diák frissítésekor:', hiba));
 }
