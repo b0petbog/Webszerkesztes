@@ -1,0 +1,29 @@
+<%- include('includes/head') %>
+
+    <link rel="stylesheet" href="/css/outgoings.css">
+</head>
+
+<body>
+    <%- include('includes/navigation') %>
+
+    <main>
+        <% if (outs.length > 0) { %>
+            <h1>My outgoings</h1>
+            <p>List of all the outgoings...</p>
+            <div class="grid">
+                <% for (let outgoings of outs) { %>
+                <article class="card outgoing-item">
+                    <header class="card__header">
+                        <h1 class="outgoing__title"><%= outgoing.title %></h1>
+                    </header>
+                    <div class="card__content">
+                        <h2 class="outgoing__price"><%= outgoing.price %></h2>
+                    </div>
+                </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No outgoing found</h1>
+        <% } %>
+    </main>
+<%- include('includes/end') %>
