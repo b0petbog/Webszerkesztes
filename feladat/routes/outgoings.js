@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
   getOutgoings((outgoings) => {
     res.render('outgoings', {
       outs: outgoings,
-      pageTitle: 'Outgoings',
+      pageTitle: 'Kiadások',
       path: '/'
     })
   })
