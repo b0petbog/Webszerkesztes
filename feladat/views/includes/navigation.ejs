@@ -1,8 +1,10 @@
-<header class="main-header"></header>
+<header class="main-header">
     <nav class="main-header__nav">
         <ul class="main-header__item-list">
-            <li class="main-header__item"><a class="<%= path == '/' ? 'active' : '' %>" href="/">Outgoings</a></li>
-            <li class="main-header__item"><a class="<%= path == '/admin/add-outgoing' ? 'active' : '' %>" href="/admin/add-product">Add outgoing</a></li>
+            <li class="main-header__item"><a class="<%= path == '/' ? 'active' : '' %>" href="/">Kiadások</a></li>
+            <li class="main-header__item"><a class="<%= path == '/admin/add-outgoing' ? 'active' : '' %>" href="/admin/add-outgoing">Kiadás hozzáadása</a></li>
+            <li class="main-header__item"><a class="<%= path == '/admin/modify-outgoing' ? 'active' : '' %>" href="/admin/modify-outgoing">Kiadás módosítása</a></li>
+            <li class="main-header__item"><a class="<%= path == '/admin/remove-outgoing' ? 'active' : '' %>" href="/admin/remove-outgoing">Kiadás törlése</a></li>
         </ul>
     </nav>
 </header>
