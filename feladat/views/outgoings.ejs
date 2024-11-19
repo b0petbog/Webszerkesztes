@@ -8,10 +8,10 @@
 
     <main>
         <% if (outs.length > 0) { %>
-            <h1>My outgoings</h1>
-            <p>List of all the outgoings...</p>
+            <h1>Kiadásaim</h1>
+            <p>Összes kiadás listázása...</p>
             <div class="grid">
-                <% for (let outgoings of outs) { %>
+                <% for (let outgoing of outs) { %>
                 <article class="card outgoing-item">
                     <header class="card__header">
                         <h1 class="outgoing__title"><%= outgoing.title %></h1>
@@ -23,7 +23,7 @@
                 <% } %>
             </div>
         <% } else { %>
-            <h1>No outgoing found</h1>
+            <h1>Nincs kiadás.</h1>
         <% } %>
     </main>
 <%- include('includes/end') %>
