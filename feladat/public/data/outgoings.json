@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "title": "teszt2",
+    "price": "789"
+  },
+  {
+    "title": "teszt5",
+    "price": "900"
+  }
+]
