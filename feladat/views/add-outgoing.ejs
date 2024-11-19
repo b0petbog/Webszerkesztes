@@ -1,7 +1,7 @@
 
 <%- include('includes/head') %>
     <link rel="stylesheet" href="/css/forms.css">
-    <link rel="stylesheet" href="/css/outgoing.css">
+    <link rel="stylesheet" href="/css/outgoings.css">
 </head>
 
 <body>
@@ -10,13 +10,13 @@
     <main>
         <form class="product-form" action="<%= path %>" method="POST">
             <div class="form-control">
-                <label for="title">Title</label>
+                <label for="title">Kiadás neve</label>
                 <input type="text" name="title" id="title">
-                <label for="price">Price</label>
+                <label for="price">Összeg</label>
                 <input type="text" name="price" id="price">
             </div>
 
-            <button class="btn" type="submit">Add outgoing</button>
+            <button class="btn" type="submit">Kiadás hozzáadása</button>
         </form>
     </main>
 <%- include('includes/end.ejs') %>
