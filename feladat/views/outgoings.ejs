@@ -6,18 +6,19 @@
 <body>
     <%- include('includes/navigation') %>
 
-    <main>
+    <main class="container text-center">
         <% if (outs.length > 0) { %>
             <h1>Kiadásaim</h1>
             <p>Összes kiadás listázása...</p>
             <div class="grid">
                 <% for (let outgoing of outs) { %>
-                <article class="card outgoing-item">
+                <article class="card outgoing-item" style="background-color:lightblue;border: double black 1px; box-shadow: 8px 8px 10px lightslategrey;">
                     <header class="card__header">
                         <h1 class="outgoing__title"><%= outgoing.title %></h1>
                     </header>
                     <div class="card__content">
-                        <h2 class="outgoing__price"><%= outgoing.price %></h2>
+                        <h2 class="outgoing__date" style="margin-bottom: 5px;"><%= outgoing.date %></h2>
+                        <h2 class="outgoing__price"><%= outgoing.price %><span>&nbsp;Ft</span></h2>
                     </div>
                 </article>
                 <% } %>
@@ -25,5 +26,5 @@
         <% } else { %>
             <h1>Nincs kiadás.</h1>
         <% } %>
-    </main>
+        </main>
 <%- include('includes/end') %>

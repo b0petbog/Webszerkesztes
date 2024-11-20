@@ -7,14 +7,14 @@
 <body>
     <%- include('includes/navigation.ejs') %>
 
-    <main>
+    <main class="text-center my-auto col-4">
         <form class="product-form" action="<%= path %>" method="POST">
-            <div class="form-control">
-                <label for="title">Kiadás neve</label>
-                <input type="text" name="title" id="title">
+            <div class="form-control" style="background-color:lightblue;box-shadow: 8px 8px 10px lightslategrey;">
+                <label for="title">Törölni kívánt kiadás neve</label>
+                <input class="form-control" type="text" name="title" id="title" placeholder="Bevásárlás">
             </div>
 
-            <button class="btn" type="submit">Kiadás törlése</button>
+            <button class="btn m-3 col-3" style="background-color:rgb(99, 195, 250);border: solid black 1px;box-shadow: 8px 8px 10px lightslategrey;" type="submit">Kiadás törlése</button>
         </form>
     </main>
 <%- include('includes/end.ejs') %>

@@ -30,6 +30,7 @@ const modifyOutgoing = (outgoing) => {
       outgoings = JSON.parse(data);
     }
     const index = outgoings.findIndex(item => item.title === outgoing.title);
+    outgoings[index].date = outgoing.date
     outgoings[index].price = outgoing.price
     fs.writeFile(outgoingsFilePath, JSON.stringify(outgoings, null, 2), (err) => {
       if (err) {
@@ -67,7 +68,7 @@ router.get('/add-outgoing', (req, res, next) => {
 
 // /admin/add-outgoing => POST
 router.post('/add-outgoing', (req, res, next) => {
-  const newOutgoing = { title: req.body.title, price: req.body.price }
+  const newOutgoing = { title: req.body.title, date: req.body.date, price: req.body.price }
   saveOutgoing(newOutgoing)
   res.redirect('/')
 })
@@ -101,7 +102,7 @@ router.get('/modify-outgoing', (req, res, next) => {
 
 // /admin/modify-outgoing => POST
 router.post('/modify-outgoing', (req, res, next) => {
-  const newOutgoing = { title: req.body.title, price: req.body.price }
+  const newOutgoing = { title: req.body.title, date: req.body.date, price: req.body.price }
   modifyOutgoing(newOutgoing)
   res.redirect('/')
 })

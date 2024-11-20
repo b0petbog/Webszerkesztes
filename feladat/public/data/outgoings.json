@@ -1,10 +1,17 @@
 [
   {
-    "title": "teszt2",
-    "price": "789"
+    "title": "Tesco vásárlás",
+    "date": "2024.11.06.",
+    "price": "21485"
   },
   {
-    "title": "teszt5",
+    "title": "Temu online vásárlás",
+    "date": "2024.10.17.",
     "price": "900"
+  },
+  {
+    "title": "Étterem",
+    "date": "2024.07.23.",
+    "price": "56000"
   }
 ]
