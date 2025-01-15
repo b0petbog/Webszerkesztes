@@ -1,17 +1,19 @@
 <template>
-  <div class="container">
-    <div v-for="t in taskStore.tasks" :key="t.id" class="task">
-      <h3>{{ t.title }}</h3><br>    
-      <p>Leírás: {{ t.desc }}</p>  
-      <p>Készen van-e: {{ t.isFinished ? "kész" : "nincs kész" }}</p>
-      <p>Határidő: {{ t.deadline }}</p>
-      <div class="footer">
-        <button @click="taskStore.finishTask(t.id)">Kész</button>
+  <div class="container grid">
+    <article v-for="t in taskStore.tasks" class="card task-item">
+      
+      <h3 class="task__title card-header">{{ t.title }}</h3>    
+      <h4 class="task__detail card__content">Leírás: {{ t.desc }}</h4>  
+      <h4 class="task__detail card__content">Állapot: {{ t.isFinished ? "Kész" : "Nincs kész" }}</h4>
+      <h4 class="task__detail card__content">Határidő: {{ t.deadline }}</h4>
+      <div class="footer" align="center">
+        <button v-if="!t.isFinished" @click="taskStore.finishTask(t.id)">Kész</button>
+        <button v-if="t.isFinished" @click="taskStore.openTask(t.id)">Visszanyitás</button>
         <button @click="taskStore.deleteTask(t.id)">Törlés</button>
-        <button v-if="!task.isFinished" @click="editTask(t.id)">Szerkesztés</button>
+        <button v-if="!t.isFinished" @click="editTask(t.id)">Szerkesztés</button>
       </div>
 
-    </div>
+    </article>
   </div>
 </template>
 
@@ -28,6 +30,68 @@
     display: flex;
     justify-content: space-around;
   }
+
+  .task-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.task-item {
+    width: 20rem;
+    max-width: 95%;
+   
+}
+
+.task__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.task__detail {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+
+.card {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: rgba(65, 178, 223, 0.842);
+}
+
+.card__header,
+.card__content {
+  padding: 1rem;
+}
+
+.card__header h1,
+.card__content h1,
+.card__content h2,
+.card__content p {
+  margin: 0;
+}
+
+.card__actions {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card__actions button,
+.card__actions a {
+    margin: 0 0.25rem;
+}
+
+footer {
+  text-align: center;
+}
+
+button {
+  margin: 2px;
+}
+
 </style>
 <script setup>
 import {ref} from 'vue'
@@ -39,9 +103,6 @@ const route = useRoute()
 const router = useRouter()
 const editTask = (id)=>{
   router.push(`/edittask/${id}`)
-}
-const createNewTask = ()=>{
-  router.push(`/newtask`)
 }
 </script>
 

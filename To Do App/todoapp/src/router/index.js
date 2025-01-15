@@ -10,13 +10,13 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/newtask/:id',
-      name: 'Új feladat',
+      path: '/newtask',
+      name: 'newtask',
       component: () => import('../views/NewTaskView.vue'),
     },
     {
-      path: '/ediktask/:id',
-      name: 'Szerkesztés',
+      path: '/edittask/:id',
+      name: 'edittask',
       component: () => import('../views/EditTaskView.vue'),
     },
   ],

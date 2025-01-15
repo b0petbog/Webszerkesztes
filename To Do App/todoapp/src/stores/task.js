@@ -20,7 +20,13 @@ export const usetaskStore = defineStore('task', () => {
       ])
 
       function finishTask(id) {
-        tasks.value[id].isFinished = true
+        const searchedId = tasks.value.findIndex(t => t.id === id)
+        tasks.value[searchedId].isFinished = true
+      }
+
+      function openTask(id) {
+        const searchedId = tasks.value.findIndex(t => t.id === id)
+        tasks.value[searchedId].isFinished = false
       }
 
       function addTask(newTask) {
@@ -30,8 +36,8 @@ export const usetaskStore = defineStore('task', () => {
       }
 
       function deleteTask(id) {
-        const taskToDeleteIdx = tasks.value.findIndex(t => t.id === id)
-        tasks.value.splice(taskToDeleteIdx, 1)
+        const searchedId = tasks.value.findIndex(t => t.id === id)
+        tasks.value.splice(searchedId, 1)
       }
 
       function updateTask(updatedTask) {
@@ -39,5 +45,5 @@ export const usetaskStore = defineStore('task', () => {
         tasks.value[id] = updatedTask
       }
 
-  return { tasks, finished, addTask, updateTask }
+  return { tasks, finishTask, addTask, updateTask, deleteTask, openTask }
 })
