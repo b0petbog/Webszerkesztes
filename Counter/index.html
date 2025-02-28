@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Counter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #fef7ff;
+    margin: 0;
+}
+.header {
+    background-color: #d3bcfd;
+    padding: 15px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+}
+.counter {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.count {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.buttons {
+    display: flex;
+    gap: 300px;
+}
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+button {
+    background-color: #ebddff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+</style>
+<body>
+    <div class="header">My counter</div>
+    <div class="container">
+        <div class="counter">Counter value:</div>
+        <div class="count">100</div>
+        <div class="buttons">
+            <div class="button-group">
+                <button>+</button>
+                <button>+</button>
+            </div>
+            <div class="button-group">
+                <button>-</button>
+                <button>-</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
